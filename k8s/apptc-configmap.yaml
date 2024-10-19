@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: apptc-configmap
+data:
+  ConnectionStrings__ControlePedidosDB: "${MONGO_DB_CONNECTION_STRING}"
+  MercadoPagoToken: "${MERCADO_PAGO_TOKEN}"
