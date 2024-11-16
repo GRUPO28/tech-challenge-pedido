@@ -42,6 +42,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Checkout", "Checkout", "{E5
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pedidos.Checkout.Infrastructure", "src\Modules\Checkout\Pedidos.Checkout.Infrastructure\Pedidos.Checkout.Infrastructure.csproj", "{FA5706B6-113B-4FC2-825C-AEEC61050B75}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pedidos.Pedido.Test.BDD", "tests\Modules\Pedido\Pedidos.Pedido.Test.BDD\Pedidos.Pedido.Test.BDD.csproj", "{6F38EBC9-724B-4958-891D-C982DA71A5DA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -80,6 +82,10 @@ Global
 		{FA5706B6-113B-4FC2-825C-AEEC61050B75}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FA5706B6-113B-4FC2-825C-AEEC61050B75}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FA5706B6-113B-4FC2-825C-AEEC61050B75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F38EBC9-724B-4958-891D-C982DA71A5DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F38EBC9-724B-4958-891D-C982DA71A5DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F38EBC9-724B-4958-891D-C982DA71A5DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F38EBC9-724B-4958-891D-C982DA71A5DA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -99,6 +105,7 @@ Global
 		{856FD099-DD5C-438C-9078-96F5C1BD9C74} = {E595F4DD-00CC-4AC0-932A-BB35DD63A234}
 		{E595F4DD-00CC-4AC0-932A-BB35DD63A234} = {F14FE484-B08C-450F-B539-34848A3E86CF}
 		{FA5706B6-113B-4FC2-825C-AEEC61050B75} = {E595F4DD-00CC-4AC0-932A-BB35DD63A234}
+		{6F38EBC9-724B-4958-891D-C982DA71A5DA} = {A45E50C9-5CC2-4BDA-A281-13CBBFE9D5CD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {83CBB7B1-7D37-4E12-BF2B-60DB8028ED60}
