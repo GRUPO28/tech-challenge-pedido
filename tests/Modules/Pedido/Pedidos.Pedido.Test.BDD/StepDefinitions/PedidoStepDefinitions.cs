@@ -1,9 +1,6 @@
-using System;
-using Reqnroll;
 using Pedidos.Common.Exceptions;
 using Pedidos.Pedido.Domain.Entities;
 using Pedidos.Pedido.Domain.Enums;
-using Xunit;
 
 namespace Pedidos.Pedido.Test.BDD.StepDefinitions;
 
