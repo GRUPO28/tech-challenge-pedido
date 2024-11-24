@@ -23,7 +23,7 @@ builder.Services.AddCheckout(builder.Configuration);
 
 // TODO: Obter connection string das configurações
 builder.Services.AddHealthChecks()
-                .AddMongoDb(Environment.GetEnvironmentVariable("ConnectionStrings__ControlePedidosDB")!);
+                .AddMySql(Environment.GetEnvironmentVariable("ConnectionStrings__ControlePedidosDB")!);
 
 builder.Services.AddHealthChecksUI(options =>
 {

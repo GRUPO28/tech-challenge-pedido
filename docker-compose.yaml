@@ -1,17 +1,21 @@
 name: tech-challenge-pedido
 services:
 
-  mongodb:
-    image: mongo:7.0.9
-    container_name: mongodb
+  database:
+    image: mysql:8.0
+    container_name: mysql
     restart: always
-    ports:
-      - "27017:27017"
     environment:
-        MONGO_INITDB_ROOT_USERNAME: admin
-        MONGO_INITDB_ROOT_PASSWORD: admin
+      MYSQL_DATABASE: 'pedido'   
+      MYSQL_USER: 'user'
+      MYSQL_PASSWORD: 'toor'      
+      MYSQL_ROOT_PASSWORD: 'toor'
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'
     volumes:
-      - ./data/db:/data/db
+      - './.mysql-data/db:/var/lib/mysql'
     networks:
       - general
 
@@ -29,7 +33,7 @@ services:
     networks:
       - general
     depends_on:
-      - mongodb
+      - database
 
 networks:
   general: {}

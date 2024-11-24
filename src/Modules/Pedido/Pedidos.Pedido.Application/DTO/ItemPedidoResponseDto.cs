@@ -2,7 +2,7 @@
 
 public class ItemPedidoResponseDto
 {
-    //public string? Id { get; set; }
+    public string? Id { get; set; }
     public string ProdutoId { get; set; } = string.Empty;
     public string Nome { get; set; } = string.Empty;
     public string TipoProduto { get; set; } = string.Empty;

@@ -7,13 +7,13 @@ using Pedidos.Pedido.Application.UseCases.ObterTodosPedidos;
 using Pedidos.Pedido.Application.UseCases.ProcessarPagamento;
 using Pedidos.Pedido.Domain.Abstractions;
 using Pedidos.Pedido.Infrastructure.Repositories.Http;
-using Pedidos.Pedido.Infrastructure.Repositories.MongoDB;
-using Pedidos.Pedido.Infrastructure.Repositories.MongoDB.Contexts;
-using Pedidos.Pedido.Infrastructure.Repositories.MongoDB.Persistence;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using Pedidos.Pedido.Infrastructure.Configurations;
+using Pedidos.Pedido.Infrastructure.Repositories.MySqlDB;
+using Pedidos.Pedido.Infrastructure.Repositories.MySqlDB.Persistence;
+using System.Configuration;
 
 namespace Pedidos.Pedido.Infrastructure.DependencyInjection;
 
@@ -22,7 +22,7 @@ public static class PedidoDependencyInjection
     public static void AddPedido(this IServiceCollection services, IConfiguration configuration)
     {
         RegisterConfigurations(services, configuration);
-        RegisterContexts(services);
+        RegisterContexts(services, configuration);
         RegisterServices(services, configuration);
         RegisterUseCases(services);
     }
@@ -49,10 +49,11 @@ public static class PedidoDependencyInjection
         services.AddScoped<IUseCase<ProcessarPagamentoPedidoRequest, ProcessarPagamentoPedidoResponse>, ProcessarPagamentoPedidoUseCase>();
     }
 
-    private static void RegisterContexts(this IServiceCollection services)
+    private static void RegisterContexts(this IServiceCollection services, IConfiguration configuration)
     {
-        MongoDbRegistror.RegisterDocumentResolver();
-        services.AddScoped<PedidoDbContext>();
+        //MongoDbRegistror.RegisterDocumentResolver();
+        //.AddScoped<PedidoDbContext>();
+        MySqlDbRegistror.RegisterServices(services, configuration);
     }
 
     private static void RegisterConfigurations(IServiceCollection services, IConfiguration configuration)
