@@ -5,3 +5,4 @@ metadata:
 data:
   ConnectionStrings__ControlePedidosDB: "${MONGO_DB_CONNECTION_STRING}"
   MercadoPagoToken: "${MERCADO_PAGO_TOKEN}"
+  RepositoryConfiguration__ProdutoApiUri: "${RepositoryConfiguration__ProdutoApiUri}"

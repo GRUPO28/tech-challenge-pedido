@@ -32,9 +32,11 @@ jobs:
         run: |
           sed -i "s|\${MONGO_DB_CONNECTION_STRING}|${MONGO_DB_CONNECTION_STRING}|g" apptc-configmap.yaml
           sed -i "s|\${MERCADO_PAGO_TOKEN}|${MERCADO_PAGO_TOKEN}|g" apptc-configmap.yaml
+          sed -i "s|\${RepositoryConfiguration__ProdutoApiUri}|${RepositoryConfiguration__ProdutoApiUri}|g" apptc-configmap.yaml
         env:
           MONGO_DB_CONNECTION_STRING: ${{ secrets.MONGO_DB_CONNECTION_STRING }}
           MERCADO_PAGO_TOKEN: ${{ secrets.MERCADO_PAGO_TOKEN }}
+          RepositoryConfiguration__ProdutoApiUri: ${{ vars.RepositoryConfiguration__ProdutoApiUri }}
 
       - name: Deploy to EKS cluster
         run: |
