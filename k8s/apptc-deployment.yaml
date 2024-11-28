@@ -1,27 +1,27 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: apptc-deployment
+  name: tc-pedido-deployment
   labels:
-    app: apptc-deployment
+    app: tc-pedido-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: apptc-deployment
+      app: tc-pedido-deployment
   template:
     metadata:
       labels:
-        app: apptc-deployment
+        app: tc-pedido-deployment
     spec:
       containers:
-      - name: apptc-deployment
-        image: grupo28/tc-controle-pedidos:latest
+      - name: tc-pedido-deployment
+        image: grupo28/tc-pedido:latest
         ports:
         - containerPort: 5187
         envFrom:
         - configMapRef:
-            name: apptc-configmap
+            name: tc-pedido-configmap
         resources:
           requests:
             cpu: "100m" # 100m equivalent to 0.1 CPU
