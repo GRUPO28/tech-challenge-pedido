@@ -22,7 +22,7 @@ Para este projeto foi desenvolvido um monolito dividido inicialmente em 4 módul
 
 ## 2.3 Arquitetura
 
-![Arquitetura](./assets/DesenhoArquiteturaFase2_v1.png)
+![Arquitetura](./assets/DesenhoArquiteturaFase4.png)
 
 ## 2.4 Banco de Dados
 
