@@ -1,5 +1,5 @@
 FROM mcr.microsoft.com/dotnet/aspnet:8.0-alpine AS base
-USER app
+USER root
 WORKDIR /app
 
 #HTTP
