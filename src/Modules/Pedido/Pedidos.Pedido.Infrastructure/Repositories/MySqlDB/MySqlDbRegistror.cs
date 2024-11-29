@@ -11,9 +11,7 @@ public static class MySqlDbRegistror
 {
     public static void RegisterServices(IServiceCollection services, IConfiguration configuration)
     {
-        services.AddDbContext<PedidoDbContext>(options => options.UseMySql(configuration.GetConnectionString("ControlePedidosDB"), 
-            ServerVersion.AutoDetect(configuration.GetConnectionString("ControlePedidosDB"))));
-
-        services.AddScoped<IPedidoRepository, PedidoRepository>();
+        services.AddDbContext<PedidoDbContext>(options => options.UseMySql(PedidoDbContext.GetConnectionString(), 
+            ServerVersion.AutoDetect(PedidoDbContext.GetConnectionString())));
     }
 }

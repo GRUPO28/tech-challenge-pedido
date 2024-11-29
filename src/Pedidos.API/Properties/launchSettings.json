@@ -17,7 +17,7 @@
       "applicationUrl": "http://localhost:5187",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
-        "ConnectionStrings__ControlePedidosDB": "mongodb://admin:123@localhost:27017/?authSource=admin&retryWrites=false&tls=false",
+        "ConnectionStrings__ControlePedidosDB": "Server=localhost;Database=pedido;Uid=root;Pwd=toor;",
         "RepositoryConfiguration__ProdutoApiUri": "http://localhost:5187/api/produtos",
         "MercadoPagoToken": "TEST-5724569334820574-051721-6259255d1097375a629b644fe127d8bb-134877168"
       }
@@ -30,7 +30,7 @@
       "applicationUrl": "https://localhost:7087;http://localhost:5187",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
-        "ConnectionStrings__ControlePedidosDB": "mongodb://admin:123@localhost:27017/?authSource=admin&retryWrites=false&tls=false",
+        "ConnectionStrings__ControlePedidosDB": "Server=localhost;Database=pedido;Uid=root;Pwd=toor;",
         "RepositoryConfiguration__ProdutoApiUri": "http://localhost:5187/api/produtos",
         "MercadoPagoToken": "TEST-5724569334820574-051721-6259255d1097375a629b644fe127d8bb-134877168"
       }

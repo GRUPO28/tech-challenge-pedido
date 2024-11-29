@@ -15,4 +15,10 @@ public class PedidoDbContext(DbContextOptions<PedidoDbContext> options) : DbCont
                     .WithOne()
                     .HasForeignKey(i => i.PedidoId);
     }
+
+    public static string GetConnectionString()
+    {
+        var connectionString = Environment.GetEnvironmentVariable("ConnectionStrings__ControlePedidosDB");
+        return Environment.ExpandEnvironmentVariables(connectionString!);
+    }
 }
