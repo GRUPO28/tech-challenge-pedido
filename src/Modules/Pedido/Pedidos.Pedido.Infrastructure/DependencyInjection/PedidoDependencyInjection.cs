@@ -14,6 +14,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using Pedidos.Pedido.Infrastructure.Configurations;
+using Pedidos.Pedido.Infrastructure.Repositories.MySQL.Persistence;
 
 namespace Pedidos.Pedido.Infrastructure.DependencyInjection;
 
@@ -32,6 +33,7 @@ public static class PedidoDependencyInjection
         services.AddScoped<IPedidoRepository, PedidoRepository>();
         services.AddScoped<IProdutoExternalRepository, ProdutoExternalRepository>();
         services.AddScoped<IPedidoApplicationService, PedidoApplicationService>();
+        services.AddScoped<IPagamentoRepository, PagamentoRepository>();
 
         services.AddHttpClient("ProdutosApi", (serviceProvider, client) =>
         {
@@ -53,6 +55,8 @@ public static class PedidoDependencyInjection
     {
         MongoDbRegistror.RegisterDocumentResolver();
         services.AddScoped<PedidoDbContext>();
+
+        //MySqlDbRegistror.RegisterServices(services);
     }
 
     private static void RegisterConfigurations(IServiceCollection services, IConfiguration configuration)
