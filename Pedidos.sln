@@ -44,6 +44,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pedidos.Checkout.Infrastruc
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pedidos.Pedido.Test.BDD", "tests\Modules\Pedido\Pedidos.Pedido.Test.BDD\Pedidos.Pedido.Test.BDD.csproj", "{6F38EBC9-724B-4958-891D-C982DA71A5DA}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Checkout", "Checkout", "{774C04C2-1886-4620-8762-7F0320BFE9FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pedidos.Checkout.Test.Unit", "Pedidos.Checkout.Test\Pedidos.Checkout.Test.Unit.csproj", "{37385777-1D1C-4203-A5B6-4A630EF4EA10}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -86,6 +90,10 @@ Global
 		{6F38EBC9-724B-4958-891D-C982DA71A5DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6F38EBC9-724B-4958-891D-C982DA71A5DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6F38EBC9-724B-4958-891D-C982DA71A5DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37385777-1D1C-4203-A5B6-4A630EF4EA10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37385777-1D1C-4203-A5B6-4A630EF4EA10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37385777-1D1C-4203-A5B6-4A630EF4EA10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37385777-1D1C-4203-A5B6-4A630EF4EA10}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -106,6 +114,8 @@ Global
 		{E595F4DD-00CC-4AC0-932A-BB35DD63A234} = {F14FE484-B08C-450F-B539-34848A3E86CF}
 		{FA5706B6-113B-4FC2-825C-AEEC61050B75} = {E595F4DD-00CC-4AC0-932A-BB35DD63A234}
 		{6F38EBC9-724B-4958-891D-C982DA71A5DA} = {A45E50C9-5CC2-4BDA-A281-13CBBFE9D5CD}
+		{774C04C2-1886-4620-8762-7F0320BFE9FD} = {DDA631F9-417D-4871-9376-FF44B447206F}
+		{37385777-1D1C-4203-A5B6-4A630EF4EA10} = {774C04C2-1886-4620-8762-7F0320BFE9FD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {83CBB7B1-7D37-4E12-BF2B-60DB8028ED60}
