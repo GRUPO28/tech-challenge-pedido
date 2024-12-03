@@ -21,9 +21,11 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddPedido(builder.Configuration);
 builder.Services.AddCheckout(builder.Configuration);
 
-// TODO: Obter connection string das configurações
+//DB HealthChecks
 builder.Services.AddHealthChecks()
                 .AddMongoDb(Environment.GetEnvironmentVariable("ConnectionStrings__ControlePedidosDB")!);
+builder.Services.AddHealthChecks()
+                .AddMySql(Environment.GetEnvironmentVariable("ConnectionStrings__ControlePedidosDB")!);
 
 builder.Services.AddHealthChecksUI(options =>
 {
